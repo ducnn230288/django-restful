@@ -1,9 +1,9 @@
 """Module for environment variable definition"""
 
-from pydantic import BaseSettings
+from pydantic import BaseModel
 
 
-class DjangoSettings(BaseSettings):
+class DjangoSettings(BaseModel):
     """Class to set Django-related environment variables"""
 
     SECRET_KEY: str = "secretkey"
@@ -17,7 +17,7 @@ class DjangoSettings(BaseSettings):
     SLACK_ENDPOINT_URL: str = "http://test"
 
 
-class AwsSettings(BaseSettings):
+class AwsSettings(BaseModel):
     """Class to set AWS related environment variables"""
 
     ENDPOINT_URL: str = "http://localstack:4566"
